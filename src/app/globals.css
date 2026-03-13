@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  background: rgba(30, 79, 163, 0.35);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 79, 163, 0.35);
+  border-radius: 12px;
+}
+:root {
+  --peak: 30 79 163;        /* #1E4FA3 */
+  --peak-hover: 23 62 130;  /* #173E82 */
+  --peak-light: 42 95 204;  /* #2A5FCC */
+}
+
+/* selección */
+::selection {
+  background: rgba(var(--peak), 0.35);
+}
+
+/* focus ring global */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--peak), 0.35);
+  border-radius: 12px;
+}
+/* Noise overlay (editorial) */
+.peak-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+/* Dejar respirar el fondo premium */
+body {
+  background: rgb(0 0 0);
+}
+
+/* Si tenés contenedores/secciones con bg-black duro, esto ayuda a que el fondo no muera */
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.92) !important;
+}
+/* para titulos en azul peak, cambia la fuente un poco mas fuerte negrita*/
+.section-label {
+  @apply text-xs font-bold tracking-widest uppercase text-[rgb(var(--peak))];
+}
