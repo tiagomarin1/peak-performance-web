@@ -1,14 +1,14 @@
 "use client";
 
 import { m, useReducedMotion } from "framer-motion";
-import { CalendarDays, ChevronRight } from "lucide-react";
+import { CalendarDays, ChevronRight, ImageIcon } from "lucide-react";
 import ReelsGallery from "@/components/pretemporada/ReelsGallery";
 
 const easePremium: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT =
-  "Hola! Quiero sumarme a la pretemporada OFF-SEASON (6 semanas) en Peak. ¿Me pasan fecha de arranque y cupos disponibles?";
+  "Hola! Quiero sumarme a la pretemporada en Peak. Me gustaría recibir mas info.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
 )}`;
@@ -19,7 +19,7 @@ type Props = {
 };
 
 export default function Pretemporada({
-  startLabel = "Verano · Off-season",
+  startLabel = "Verano · Pretemporada",
   spotsLabel = "Cupos limitados",
 }: Props) {
   const reduce = useReducedMotion();
@@ -34,7 +34,7 @@ export default function Pretemporada({
 
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-[-10%] h-72 w-[56rem] -translate-x-1/2 rounded-full bg-[rgba(var(--peak),0.12)] blur-3xl" />
-        <div className="absolute left-1/2 bottom-[-10%] h-72 w-[56rem] -translate-x-1/2 rounded-full bg-[rgba(var(--peak),0.10)] blur-3xl" />
+        <div className="absolute bottom-[-10%] left-1/2 h-72 w-[56rem] -translate-x-1/2 rounded-full bg-[rgba(var(--peak),0.10)] blur-3xl" />
       </div>
 
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default function Pretemporada({
                 id="pretemporada-title"
                 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl"
               >
-                Un verano de trabajo serio para llegar mejor a la temporada.
+                Un bloque de trabajo serio para llegar mejor a la temporada.
               </h2>
 
               <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
@@ -90,52 +90,21 @@ export default function Pretemporada({
               {
                 id: "s1",
                 label: "Semana 1",
-                title: "Semana 1 · Arranque, base y estándares",
+                title: "Semana 1 · Mediciones de fuerza",
                 url: "https://instagram.com/reel/DSyZOovjhHE",
                 featured: true,
               },
               {
                 id: "s2",
                 label: "Semana 2",
-                title: "Semana 2 · Fuerza base y progresión",
+                title: "Semana 2 · Progreso",
                 url: "https://instagram.com/reel/DTG2n7JDtNY",
               },
               {
                 id: "s3",
                 label: "Semana 3",
-                title: "Semana 3 · Potencia transferible",
+                title: "Semana 3 · Mayor rendimiento",
                 url: "https://instagram.com/reel/DTY-Qvmjl7a",
-              },
-              {
-                id: "spr",
-                label: "Sprints",
-                title: "Día de sprints · Exposición + técnica",
-                url: "https://instagram.com/reel/DTRNOqbjshY",
-                featured: true,
-              },
-              {
-                id: "day",
-                label: "Un día",
-                title: "Un día de pretemporada · Piso real",
-                url: "https://instagram.com/reel/DTlkcCaDii2",
-              },
-              {
-                id: "s4",
-                label: "Semana 4",
-                title: "Semana 4 · Velocidad y mecánica",
-                url: "https://instagram.com/reel/DTq2RJWDt2t",
-              },
-              {
-                id: "s5",
-                label: "Semana 5",
-                title: "Semana 5 · COD, tolerancia y monitoreo",
-                url: "https://instagram.com/reel/DT6ONLeDmKL",
-              },
-              {
-                id: "s6",
-                label: "Semana 6",
-                title: "Semana 6 · Testeos de velocidad y saltos",
-                url: "https://instagram.com/reel/DUmSZMzDn7x",
               },
             ]}
           />
@@ -155,20 +124,20 @@ export default function Pretemporada({
               </p>
 
               <h3 className="mt-2 text-xl font-semibold tracking-tight text-white">
-                Seis semanas para ordenar el trabajo y llegar mejor preparado.
+                Un proceso pensado para llegar mejor preparado al inicio de la
+                temporada.
               </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
-                Durante el verano se trabaja sobre una base física real:
-                evaluación inicial, progresión de fuerza, desarrollo de potencia,
-                velocidad y re-test final para ver cómo llegaste al cierre del
-                ciclo.
+                Durante este bloque se trabaja sobre una base física real:
+                desarrollo de fuerza, potencia, velocidad y control de cargas
+                para llegar en mejores condiciones al deporte.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-white/70 sm:text-base">
-                El resultado no es solamente “sentirse cansado”: es llegar a la
-                temporada con mejor estructura, mejor capacidad de respuesta y
-                más confianza física para competir o entrenar fuerte.
+                El objetivo no es solamente entrenar más, sino entrenar con
+                criterio para construir una mejor base física y rendir mejor en
+                cancha.
               </p>
             </div>
 
@@ -188,11 +157,11 @@ export default function Pretemporada({
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[rgb(var(--peak))]" />
-                  <span>Menor riesgo de arrancar “duro” o mal preparado</span>
+                  <span>Menor riesgo de arrancar mal preparado</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[rgb(var(--peak))]" />
-                  <span>Un proceso medido y mucho más profesional</span>
+                  <span>Un proceso mucho más profesional y ordenado</span>
                 </li>
               </ul>
 
@@ -205,6 +174,58 @@ export default function Pretemporada({
                 Consultar cupos <ChevronRight className="ml-1 h-4 w-4" />
               </a>
             </div>
+          </div>
+        </m.div>
+
+        {/* IMAGENES */}
+        <m.div
+          className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8"
+          initial={reduce ? false : { opacity: 0, y: 10 }}
+          whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45, ease: easePremium }}
+        >
+          <div className="max-w-2xl">
+            <p className="text-xs font-medium tracking-wider text-[rgb(var(--peak))]">
+              IMÁGENES
+            </p>
+
+            <h3 className="mt-2 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              Imágenes de la pretemporada
+            </h3>
+
+            <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
+              Jornadas reales, trabajo en equipo y sesiones con foco en rendimiento.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {[
+              "/pretemporada/img_prete01.webp",
+              "/pretemporada/img_prete02.webp",
+              "/pretemporada/img_prete03.webp",
+              "/pretemporada/img_prete04.webp",
+              "/pretemporada/img_prete05.webp",
+              "/pretemporada/img_prete06.webp",
+              "/pretemporada/img_prete07.webp",
+              "/pretemporada/img_prete08.webp",
+              "/pretemporada/img_prete09.webp",
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="group overflow-hidden rounded-xl border border-white/10"
+              >
+                <img
+                  src={src}
+                  alt="Pretemporada Peak Performance"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                />
+
+                <div className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
+              </div>
+            ))}
           </div>
         </m.div>
       </div>

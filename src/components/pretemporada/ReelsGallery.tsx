@@ -44,8 +44,7 @@ export default function ReelsGallery({ items }: { items: ReelItem[] }) {
             Mirá cómo se vive la pretemporada en Peak.
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-white/70">
-            Sesiones reales, contexto real y una experiencia controlada dentro de
-            la web.
+            Entrenamientos con planificación, progresión y foco en fuerza, potencia y velocidad.
           </p>
         </div>
       </div>

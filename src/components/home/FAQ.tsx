@@ -1,39 +1,87 @@
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem, HoverLift } from "@/components/ui/motion";
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT =
   "Hola! Tengo unas consultas sobre Peak Performance antes de arrancar.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
 )}`;
 
-type FAQItem = { q: string; a: string };
+type FAQItem = {
+  q: string;
+  a: string[];
+};
 
 const FAQS: FAQItem[] = [
   {
-    q: "¿Necesito experiencia previa para entrenar en Peak Performance?",
-    a: "No. Ajustamos el plan a tu nivel real. Si estás arrancando, priorizamos técnica, progresión y adherencia. Si ya entrenás, optimizamos rendimiento con estructura y métricas.",
+    q: "¿Para quién es Peak Performance?",
+    a: [
+      "Peak Performance está pensado para deportistas que buscan mejorar su rendimiento.",
+      "Trabajamos principalmente con jugadores y jugadoras de básquet, fútbol, hockey, handball y otros deportes de equipo e individuales.",
+      "También acompañamos a deportistas en nivel competitivo o en proceso de llegar a ese nivel.",
+      "Si tu objetivo es más general, como salud o fitness, también podés entrenar con nosotros a través de un formato personalizado.",
+    ],
   },
   {
-    q: "¿Qué pasa si vengo con una lesión o dolor recurrente?",
-    a: "Primero evaluamos. Identificamos limitaciones, adaptamos cargas y trabajamos patrones/movilidad según corresponda. La idea es que progreses sin agravar molestias y con un plan seguro.",
+    q: "¿Necesito tener experiencia previa en entrenamiento?",
+    a: [
+      "Para sumarte a los turnos habituales, sí es importante contar con una base de entrenamiento.",
+      "Trabajamos con una dinámica exigente y orientada al rendimiento, por lo que buscamos que los atletas ya tengan cierto recorrido previo.",
+      "De todas formas, si no tenés esa base, podés empezar con un formato más personalizado, donde te acompañamos en ese proceso hasta que estés listo para integrarte a los grupos.",
+    ],
   },
   {
-    q: "¿Cuántas veces por semana se recomienda entrenar?",
-    a: "Depende de tu objetivo y disponibilidad. Como base: 2–3 sesiones semanales para progresar en fuerza y composición, y 3–5 si buscás rendimiento más específico. Lo definimos en la evaluación.",
+    q: "¿Cómo son los entrenamientos?",
+    a: [
+      "Los entrenamientos duran aproximadamente 1:30 hs y están guiados por nuestro equipo.",
+      "No trabajamos con rutinas genéricas: cada planificación se ajusta a tu deporte, tus objetivos y el momento de la temporada en el que estés.",
+      "Durante las sesiones vas a trabajar sobre fuerza, potencia, velocidad y movimientos propios de tu deporte, siempre con la idea de que todo lo que hagas en el gimnasio tenga impacto en la cancha.",
+    ],
   },
   {
-    q: "¿Cómo es el seguimiento?",
-    a: "Hay control de carga y ajustes según tu respuesta: cómo te sentís, rendimiento en ejercicios clave y consistencia. La planificación se adapta para sostener progreso sin estancarte.",
+    q: "¿Puedo entrenar en cualquier horario?",
+    a: [
+      "No. Trabajamos con horarios específicos para garantizar la calidad del servicio.",
+      "Horarios de grupos: lunes a viernes de 8:00 a 11:00 y de 17:00 a 21:00.",
+      "Sábados: de 10:00 a 11:30.",
+      "Fuera de esos horarios se realizan entrenamientos personalizados o trabajos específicos.",
+    ],
   },
   {
-    q: "¿Cuánto tarda en verse progreso?",
-    a: "En general, en 3–4 semanas ya se nota mejora en técnica, energía y consistencia. Cambios fuertes en rendimiento o composición suelen verse entre 8–12 semanas, según punto de partida.",
+    q: "¿Cómo hago para empezar?",
+    a: [
+      "El primer paso es escribirnos para evaluar tu caso.",
+      "Antes de arrancar, analizamos tu deporte y nivel, entendemos tus objetivos y definimos el formato de trabajo más adecuado.",
+      "Buscamos que cada persona que entrene en Peak lo haga dentro de una estructura que realmente le aporte valor.",
+    ],
   },
   {
-    q: "¿Qué incluye la evaluación inicial?",
-    a: "Objetivo e historial, revisión de movilidad/patrones y una medición base (fuerza/capacidades según tu caso). Con eso armamos el plan recomendado y los próximos pasos.",
+    q: "¿Cuántas veces por semana debería entrenar?",
+    a: [
+      "Depende de tu nivel, tus objetivos y tu calendario competitivo.",
+      "En general, los deportistas en competencia entrenan entre 2 y 4 veces por semana.",
+      "En casos personalizados, la frecuencia se define según la necesidad específica.",
+      "El objetivo no es entrenar más, sino entrenar mejor y con sentido.",
+    ],
+  },
+  {
+    q: "¿Puedo entrenar si estoy lesionado o en recuperación?",
+    a: [
+      "Sí. Trabajamos también con deportistas que están atravesando una lesión o volviendo a entrenar después de una.",
+      "El objetivo no es solo que te recuperes, sino que vuelvas a tu deporte mejor preparado que antes.",
+      "En estos casos, adaptamos completamente el entrenamiento a tu situación, respetamos los tiempos del proceso y trabajamos progresivamente para que vuelvas a la cancha con confianza.",
+      "Dependiendo del caso, el proceso puede empezar con un formato más personalizado y, a medida que avanzás, integrarte al trabajo grupal.",
+    ],
+  },
+  {
+    q: "¿Puedo probar antes de empezar?",
+    a: [
+      "Sí. El primer entrenamiento es sin cargo.",
+      "Una vez que te comunicás con nosotros, coordinamos un primer encuentro donde hacemos una evaluación para entender desde qué punto estás arrancando.",
+      "En ese primer entrenamiento vemos tu nivel actual, detectamos fortalezas y debilidades, y analizamos tu deporte y tus objetivos.",
+      "A partir de eso, te recomendamos el formato de trabajo que más te conviene para empezar, ya sea grupal o personalizado.",
+    ],
   },
 ];
 
@@ -51,10 +99,10 @@ export default function FAQ() {
     >
       <div className="pointer-events-none absolute inset-0">
         <div
-          className={`absolute left-1/2 top-0 h-72 w-\[46rem\] -translate-x-1/2 rounded-full ${peakBg12} blur-3xl`}
+          className={`absolute left-1/2 top-0 h-72 w-[46rem] -translate-x-1/2 rounded-full ${peakBg12} blur-3xl`}
         />
         <div
-          className={`absolute left-1/2 bottom-0 h-72 w-\[46rem\] -translate-x-1/2 rounded-full ${peakBg10} blur-3xl`}
+          className={`absolute bottom-0 left-1/2 h-72 w-[46rem] -translate-x-1/2 rounded-full ${peakBg10} blur-3xl`}
         />
       </div>
 
@@ -62,9 +110,7 @@ export default function FAQ() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <Reveal>
-              <p className="section-label">
-                FAQ
-              </p>
+              <p className="section-label">FAQ</p>
             </Reveal>
 
             <Reveal delay={0.03}>
@@ -78,8 +124,8 @@ export default function FAQ() {
 
             <Reveal delay={0.06}>
               <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
-                Respuestas claras a las preguntas que más se repiten. Si querés,
-                nos escribís y te guiamos según tu caso.
+                Estas son algunas de las preguntas que más se repiten antes de
+                empezar. Si querés, nos escribís y te guiamos según tu caso.
               </p>
             </Reveal>
           </div>
@@ -118,9 +164,16 @@ export default function FAQ() {
                     </span>
                   </summary>
 
-                  <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
-                    {item.a}
-                  </p>
+                  <div className="mt-3 space-y-3">
+                    {item.a.map((paragraph, index) => (
+                      <p
+                        key={`${item.q}-${index}`}
+                        className="text-sm leading-relaxed text-white/70 sm:text-base"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </details>
               </HoverLift>
             </StaggerItem>

@@ -2,19 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, MessageCircle, Instagram } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT = "Hola! Quiero empezar a entrenar en Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
 )}`;
 
 const MAPS_URL = "https://maps.app.goo.gl/i3wyMMCQiMhcCupD8";
-const INSTAGRAM_URL = "https://www.instagram.com/peakperformance.arg/";
+const INSTAGRAM_URL = "https://www.instagram.com/peak_pfm/";
 
 const SECCIONES = [
   { href: "/pretemporada", label: "Pretemporada" },
   { href: "/equipo", label: "Equipo" },
-  { href: "/instalaciones", label: "Instalaciones" },
+  { href: "/instalaciones", label: "Entrenamientos" },
   { href: "/contacto", label: "Contacto" },
   { href: "/#metodo", label: "Método" },
   { href: "/#resultados", label: "Resultados" },
@@ -120,10 +120,6 @@ export default function Footer() {
                   Instagram
                 </a>
               </div>
-
-              <p className="mt-4 text-xs text-white/50">
-                Respuesta rápida en horario laboral.
-              </p>
             </div>
           </div>
         </div>

@@ -75,14 +75,7 @@ export default function Resultados() {
                 </p>
               </div>
 
-              <div className="mt-6">
-                <a
-                  href="#contacto"
-                  className="rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-[rgba(var(--peak),0.4)] hover:text-[rgb(var(--peak))]"
-                >
-                  Consultar
-                </a>
-              </div>
+              
             </m.div>
 
             <div className="lg:col-span-7">

@@ -1,6 +1,6 @@
 import { Reveal, Stagger, StaggerItem, HoverLift } from "@/components/ui/motion";
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT =
   "Hola! Quiero agendar una evaluación inicial en Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

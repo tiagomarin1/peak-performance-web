@@ -1,17 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MessageCircle, MapPin, LayoutGrid, X } from "lucide-react";
+import {
+  MessageCircle,
+  MapPin,
+  LayoutGrid,
+  X,
+  Instagram,
+} from "lucide-react";
 import { AnimatePresence, m } from "framer-motion";
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT = "Hola! Quiero consultar por Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
 )}`;
 
 const MAPS_LINK =
-  "https://www.google.com/maps/search/?api=1&query=Peak%20Performance%20Gym";
+  "https://maps.app.goo.gl/i3wyMMCQiMhcCupD8";
+
+const INSTAGRAM_LINK = "https://www.instagram.com/peak_pfm/";
 
 export default function FloatingCTA() {
   const [open, setOpen] = useState(false);
@@ -24,11 +32,10 @@ export default function FloatingCTA() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // ✅ defensa: si ALGÚN componente dejó overflow hidden colgado, lo limpiamos al cerrar
   useEffect(() => {
     if (!open) {
-      // no tocamos si ya está normal; pero limpiamos por si quedó colgado
-      if (document.body.style.overflow === "hidden") document.body.style.overflow = "";
+      if (document.body.style.overflow === "hidden")
+        document.body.style.overflow = "";
       if (document.documentElement.style.overflow === "hidden")
         document.documentElement.style.overflow = "";
     }
@@ -42,9 +49,7 @@ export default function FloatingCTA() {
   const peakBorder35 = "border-[rgba(var(--peak),0.35)]";
 
   return (
-    // ✅ wrapper full = no intercepta gestos
-    <div className="fixed inset-0 z-\[80\] pointer-events-none">
-      {/* ✅ solo esto recibe clicks/touch */}
+    <div className="fixed inset-0 z-[80] pointer-events-none">
       <div className="pointer-events-auto fixed bottom-5 right-5 touch-manipulation">
         <AnimatePresence>
           {open && (
@@ -53,7 +58,7 @@ export default function FloatingCTA() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.22 }}
-              className="mb-3 w-\[260px\] overflow-hidden rounded-2xl border border-white/10 bg-black/70 shadow-2xl backdrop-blur"
+              className="mb-3 w-[260px] overflow-hidden rounded-2xl border border-white/10 bg-black/70 shadow-2xl backdrop-blur"
             >
               <div className={`h-1 w-full ${peakBg}`} />
 
@@ -63,6 +68,7 @@ export default function FloatingCTA() {
                 </p>
 
                 <div className="mt-3 grid gap-2">
+                  {/* WHATSAPP */}
                   <a
                     href={WHATSAPP_LINK}
                     target="_blank"
@@ -88,6 +94,40 @@ export default function FloatingCTA() {
                     <span className="text-white/90">→</span>
                   </a>
 
+                  {/* INSTAGRAM */}
+                  <a
+                    href={INSTAGRAM_LINK}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={[
+                      "flex items-center justify-between rounded-xl border px-3 py-3 text-sm font-semibold transition hover:bg-[rgba(var(--peak),0.18)] focus:outline-none focus-visible:ring-2",
+                      peakBorder35,
+                      peakBg10,
+                      peakText,
+                      peakRing,
+                    ].join(" ")}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span
+                        className={[
+                          "grid h-9 w-9 place-items-center rounded-xl border",
+                          peakBorder35,
+                          peakBg10,
+                        ].join(" ")}
+                      >
+                        <Instagram className={`h-4 w-4 ${peakText}`} />
+                      </span>
+                      <span>
+                        Instagram
+                        <span className="ml-2 text-xs font-medium text-white/70">
+                          Ver contenido
+                        </span>
+                      </span>
+                    </span>
+                    <span className={peakText}>→</span>
+                  </a>
+
+                  {/* MAPS */}
                   <a
                     href={MAPS_LINK}
                     target="_blank"
@@ -133,6 +173,7 @@ export default function FloatingCTA() {
           )}
         </AnimatePresence>
 
+        {/* BOTÓN */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -146,14 +187,13 @@ export default function FloatingCTA() {
             boxShadow:
               "0 18px 40px rgba(0,0,0,0.35), 0 10px 22px rgba(var(--peak),0.25)",
           }}
-          aria-label={open ? "Cerrar accesos" : "Abrir accesos"}
         >
           <span className="grid h-9 w-9 place-items-center rounded-full bg-white/10">
             {open ? <X className="h-5 w-5" /> : <LayoutGrid className="h-5 w-5" />}
           </span>
           <span>Accesos</span>
           <span className="ml-1 inline-flex h-6 items-center justify-center rounded-full bg-white/15 px-2 text-xs">
-            2
+            3
           </span>
         </button>
       </div>

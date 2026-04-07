@@ -12,11 +12,11 @@ const NAV = [
   { href: "/", label: "Inicio" },
   { href: "/pretemporada", label: "Pretemporada" },
   { href: "/equipo", label: "Equipo" },
-  { href: "/instalaciones", label: "Instalaciones" },
+  { href: "/instalaciones", label: "Entrenamientos" },
   { href: "/contacto", label: "Contacto" },
 ] as const;
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT = "Hola! Quiero empezar a entrenar en Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
@@ -108,10 +108,10 @@ export default function Header() {
                 onClick={() => setOpen(false)}
               >
                 <Image
-                  src="/brand/isologo.png"
+                  src="/brand/logo.png"
                   alt="Peak Performance"
-                  width={28}
-                  height={28}
+                  width={32}
+                  height={32}
                 />
                 <span className="text-sm font-semibold">Peak Performance</span>
               </Link>
@@ -174,14 +174,14 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-[1000] w-full border-b border-white/10 bg-white/90 text-black backdrop-blur pointer-events-auto">
+      <header className="fixed left-0 top-0 z-[1000] w-full border-b border-black/10 bg-white text-black pointer-events-auto">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/brand/isologo.png"
+              src="/brand/logo.png"
               alt="Peak Performance"
-              width={28}
-              height={28}
+              width={42}
+              height={42}
               priority
             />
             <span className="text-sm font-semibold tracking-tight">

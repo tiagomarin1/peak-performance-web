@@ -6,9 +6,9 @@ import { CalendarDays, ChevronRight, Sparkles } from "lucide-react";
 
 const easePremium: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT =
-  "Hola! Quiero sumarme a la pretemporada OFF-SEASON (6 semanas) en Peak. ¿Me suman a lista de espera y me confirman cupos?";
+  "Hola! Me gustaría recibir más info sobre la pretemporada en Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
 )}`;

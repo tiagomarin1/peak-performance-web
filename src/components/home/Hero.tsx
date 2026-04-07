@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/motion";
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT =
   "Hola! Quiero empezar a entrenar en Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -13,7 +13,7 @@ export default function Hero() {
     <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/brand/hero.webp"
+          src="/brand/heroPeak.webp"
           alt="Entrenamiento de alto rendimiento"
           fill
           priority
@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="max-w-2xl space-y-6">
           <Reveal y={18}>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-              Elevá tu rendimiento.
+              Elevá tu rendimiento,
               <br />
               <span className="text-neutral-300">
                 Entrená con propósito.
@@ -40,8 +40,7 @@ export default function Hero() {
 
           <Reveal delay={0.05}>
             <p className="text-lg text-neutral-200 md:text-xl">
-              Fuerza, velocidad y prevención con planificación profesional.
-              Entrenamiento medible para atletas reales.
+              Mejora tu rendimiento con Peak Performance.
             </p>
           </Reveal>
 
@@ -53,7 +52,7 @@ export default function Hero() {
                 rel="noreferrer"
                 className="block rounded-xl bg-white px-8 py-4 text-center font-semibold text-black transition hover:bg-neutral-200"
               >
-                Reservar por WhatsApp
+                Entrená con nosotros
               </a>
             </StaggerItem>
           </Stagger>

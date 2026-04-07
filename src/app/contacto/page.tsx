@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contacto" },
 };
 
-const WHATSAPP_NUMBER = "5491113797637";
+const WHATSAPP_NUMBER = "5491131979637";
 const WHATSAPP_TEXT = "Hola! Quiero empezar a entrenar en Peak Performance.";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT
@@ -110,7 +110,7 @@ export default function ContactoPage() {
           <StaggerItem>
             <HoverLift>
               <div className="rounded-2xl border border-white/10 bg-black/30 p-6 text-sm text-white/70">
-                Tip: contanos tu objetivo, tu disponibilidad semanal y si venís
+                Contanos tu objetivo, tu disponibilidad semanal y si venís
                 de alguna molestia o lesión para orientarte mejor.
               </div>
             </HoverLift>
