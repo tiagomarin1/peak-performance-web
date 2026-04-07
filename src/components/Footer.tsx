@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/brand/isologo.png"
+                src="/brand/isologo.webp"
                 alt="Peak Performance"
                 width={30}
                 height={30}

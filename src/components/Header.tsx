@@ -108,7 +108,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
               >
                 <Image
-                  src="/brand/logo.png"
+                  src="/brand/logo.webp"
                   alt="Peak Performance"
                   width={32}
                   height={32}
