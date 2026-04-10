@@ -108,7 +108,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
               >
                 <Image
-                  src="/brand/logo.webp"
+                  src="public/brand/logo.webp"
                   alt="Peak Performance"
                   width={32}
                   height={32}
@@ -178,7 +178,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/brand/logo.webp"
+              src="public/brand/logo.webp"
               alt="Peak Performance"
               width={42}
               height={42}
