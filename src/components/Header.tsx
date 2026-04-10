@@ -108,7 +108,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
               >
                 <Image
-                  src="/brand/logoPeak.webp" // logo mobile
+                  src="/brand/logo.webp" // logo mobile
                   alt="Peak Performance"
                   width={32}
                   height={32}
@@ -179,7 +179,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/brand/logoPeak.webp" // logo pc
+              src="/brand/logo.webp" // logo pc
               alt="Peak Performance"
               width={42}
               height={42}
