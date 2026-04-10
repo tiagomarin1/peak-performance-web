@@ -113,6 +113,7 @@ export default function Header() {
                   width={32}
                   height={32}
                   priority
+                  className="object-cover md:object-cover object-[center_top]"
                 />
                 <span className="text-sm font-semibold">Peak Performance</span>
               </Link>
